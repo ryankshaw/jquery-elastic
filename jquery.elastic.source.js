@@ -11,7 +11,15 @@
 *	@licence						MIT License - http://www.opensource.org/licenses/mit-license.php
 */
 
-(function($){ 
+(function (factory) { // UMD wrapper
+  if (typeof module === 'object' && module.exports) {
+    factory(require('jquery'))
+  } else if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory)
+  } else {
+    factory(jQuery)
+  }
+}(function ($) {
 	jQuery.fn.extend({  
 		elastic: function() {
 		
@@ -159,4 +167,4 @@
 			
         } 
     }); 
-})(jQuery);
+}));
