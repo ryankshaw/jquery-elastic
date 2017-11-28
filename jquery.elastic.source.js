@@ -148,13 +148,16 @@
 				
 				// Compact textarea on blur
 				$textarea.bind('blur',function(){
-					if($twin.height() < maxheight){
-						if($twin.height() > minheight) {
-							$textarea.height($twin.height());
-						} else {
-							$textarea.height(minheight);
+					function compact(){
+						if($twin.height() < maxheight){
+							if($twin.height() > minheight) {
+								$textarea.height($twin.height());
+							} else {
+								$textarea.height(minheight);
+							}
 						}
 					}
+					setTimeout(compact, 500);
 				});
 				
 				// And this line is to catch the browser paste event
