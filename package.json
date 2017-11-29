@@ -1,6 +1,6 @@
 {
   "name": "jquery.elastic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Elastic makes your textareas grow and shrink to fit it’s content. http://jan.jarfalk.se/jquery-elastic/",
   "main": "jquery.elastic.source.js",
   "repository": {
